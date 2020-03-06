@@ -1,5 +1,12 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import styled from "styled-components";
+
+const Form = styled.form`
+  background: lightgrey;
+  height: 100px;
+  width: 100%;
+  margin: 0, auto;
+`;
 
 const CustomInput = styled.input`
   background: lightblue;
@@ -10,16 +17,16 @@ const CustomInput = styled.input`
 `;
 const CustomButton = styled.button`
   background: lightgrey;
-  height: 30px;
+  height: 35px;
   width: 100px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: red;
 `;
 
 const Date = props => {
   return (
     <div>
-      <form onSubmit={e => props.handleSubmit(e)}>
+      <Form onSubmit={e => props.handleSubmit(e)}>
         <p>
           <strong>Select Date To See Picture From That Date</strong>
         </p>
@@ -30,7 +37,7 @@ const Date = props => {
           placeholder="Date (YYYY-MM-DD)"
         />
         <CustomButton>Submit</CustomButton>
-      </form>
+      </Form>
     </div>
   );
 };
