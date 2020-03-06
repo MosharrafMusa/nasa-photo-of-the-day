@@ -32,6 +32,9 @@ function App(props) {
       <div className="Search">
         <Date handleDate={handleDate} handleSubmit={handleSubmit} />
       </div>
+      <footer>
+        <span>copyright@ APOD from NASA-2020</span>
+      </footer>
     </div>
   );
 }
